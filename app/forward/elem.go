@@ -36,3 +36,5 @@ func (i *iterElem) AsSilent() bool { return i.opts.silent }
 func (i *iterElem) AsDryRun() bool { return i.opts.dryRun }
 
 func (i *iterElem) AsGrouped() bool { return i.opts.grouped }
+
+func (i *iterElem) AsDropAuthor() bool { return i.opts.dropAuthor }

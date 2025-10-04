@@ -257,10 +257,10 @@ func (f *Forwarder) forwardMessage(ctx context.Context, elem Elem, grouped ...*t
 				}
 
 				req := &tg.MessagesForwardMessagesRequest{
-					Silent:            elem.AsSilent(),
+				Silent:            elem.AsSilent(),
 					Background:        false,
 					WithMyScore:       false,
-					DropAuthor:        false,
+				DropAuthor:        elem.AsDropAuthor(),
 					DropMediaCaptions: false,
 					Noforwards:        false,
 					FromPeer:          elem.From().InputPeer(),
